@@ -1,211 +1,152 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><title>Informe – Caso Práctico 1: Fusión CaixaBank–Bankia</title>
+<html lang="es"><head><meta charset="utf-8"><title>Caso Práctico 1 – Fusión CaixaBank y Bankia</title>
 <style>
-@page { size: A4; margin: 22mm 20mm 20mm 20mm; }
-@page :first { margin: 0; }
-:root { --navy:#0B2545; --teal:#0F8B8D; --amber:#F4A259; --ink:#1B2433; --muted:#5C6B7A; --light:#EEF3F7; }
-* { box-sizing: border-box; }
-body { font-family: Carlito, Calibri, Arial, sans-serif; color: var(--ink); font-size: 11.3pt; line-height: 1.5; margin: 0; }
-.cover { height: 297mm; background: var(--navy); color: #fff; padding: 40mm 22mm 25mm; position: relative; page-break-after: always; }
-.cover .k { color: var(--amber); letter-spacing: .14em; font-weight: 700; font-size: 11pt; }
-.cover h1 { font-size: 40pt; line-height: 1.08; margin: 14mm 0 8mm; }
-.cover .sub { font-size: 16pt; color: #BFD0E0; max-width: 140mm; }
-.cover .meta { position: absolute; bottom: 25mm; left: 22mm; right: 22mm; font-size: 11pt; color: #BFD0E0; border-top: 1px solid #2c4a70; padding-top: 6mm; }
-.cover .circles { position: absolute; right: 22mm; top: 150mm; width: 95mm; height: 70mm; }
-.cover .c1,.cover .c2 { position:absolute; border-radius:50%; opacity:.88; display:flex; align-items:center; justify-content:center; text-align:center; font-weight:700; }
-.cover .c1 { width:62mm; height:62mm; background:var(--teal); left:0; top:0; font-size:18pt; }
-.cover .c2 { width:48mm; height:48mm; background:var(--amber); left:45mm; top:16mm; color:var(--navy); font-size:15pt; }
-.cover small { display:block; font-size:9.5pt; font-weight:400; }
-h2 { color: var(--navy); font-size: 19pt; margin: 0 0 3mm; padding-top: 2mm; }
-h2 .n { color: var(--teal); margin-right: 3mm; }
-h3 { color: var(--teal); font-size: 13pt; margin: 6mm 0 2mm; }
-p { margin: 0 0 3mm; text-align: justify; hyphens: auto; }
-section { page-break-before: auto; margin-top: 9mm; }
-h2, h3, .q { break-after: avoid; page-break-after: avoid; } .q, .stat { break-inside: avoid; page-break-inside: avoid; }
-.toc { list-style: none; padding: 0; font-size: 12.5pt; }
-.toc li { padding: 2.2mm 0; border-bottom: 1px dotted #c8d3de; }
-.toc .n { color: var(--teal); font-weight: 700; display: inline-block; width: 12mm; }
-.q { background: var(--light); padding: 4mm 5mm; border-radius: 2mm; font-style: italic; margin: 0 0 5mm; color: var(--navy); }
-.stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 3mm; margin: 4mm 0 5mm; }
-.stat { background: var(--light); border-radius: 2mm; padding: 4mm; }
-.stat b { display:block; font-size: 17pt; color: var(--teal); line-height:1.1; }
-.stat span { font-size: 9.5pt; color: var(--muted); }
-.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 3mm 0 4mm; }
-.card { border: 1px solid #D5DEE7; border-radius: 2mm; padding: 3mm 4mm; page-break-inside: avoid; }
-.card b { color: var(--navy); }
-table { width: 100%; border-collapse: collapse; margin: 3mm 0 4mm; font-size: 10pt; page-break-inside: avoid; }
-th { background: var(--navy); color: #fff; text-align: left; padding: 2mm 2.5mm; }
-td { border-bottom: 1px solid #D5DEE7; padding: 2mm 2.5mm; vertical-align: top; }
-td:first-child { font-weight: 700; color: var(--navy); width: 22%; }
-.steps { counter-reset: s; list-style: none; padding: 0; margin: 2mm 0 4mm; }
-.steps li { position: relative; padding: 0 0 3mm 11mm; page-break-inside: avoid; }
-.steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 0; width: 7.5mm; height: 7.5mm; border-radius: 50%; background: var(--teal); color: #fff; font-weight: 700; text-align: center; line-height: 7.5mm; font-size: 10pt; }
-.steps li b { color: var(--navy); }
-.note { border-left: 0; background: #FDEBD9; padding: 3mm 4.5mm; border-radius: 2mm; margin: 3mm 0 4mm; font-size: 10.5pt; }
-.caption { font-size: 9pt; color: var(--muted); margin-top: -2mm; }
-.refs p { text-indent: -8mm; padding-left: 8mm; text-align: left; font-size: 10.5pt; }
-figure { margin: 4mm 0; page-break-inside: avoid; }
+@page { size: A4; margin: 25mm 22mm 22mm 22mm; }
+:root { --rosa:#B23A66; --rosa2:#D6457A; --claro:#FDF0F4; --ink:#2E2228; }
+body { font-family: Carlito, Calibri, Arial, sans-serif; color: var(--ink); font-size: 12pt; line-height: 1.55; margin: 0; }
+.cover { height: 245mm; display: flex; flex-direction: column; justify-content: center; text-align: center; page-break-after: always; }
+.cover .uni { font-size: 13pt; color: #7B2D4F; }
+.cover h1 { font-size: 30pt; color: var(--rosa); margin: 30mm 0 4mm; }
+.cover .sub { font-size: 15pt; margin-bottom: 30mm; }
+.cover .line { width: 60mm; height: 2px; background: #F59AB5; margin: 0 auto 30mm; }
+.cover .meta { font-size: 12pt; line-height: 1.9; }
+h2 { color: var(--rosa); font-size: 17pt; margin: 9mm 0 3mm; break-after: avoid; }
+h3 { color: var(--rosa2); font-size: 13pt; margin: 5mm 0 2mm; break-after: avoid; }
+p { margin: 0 0 3mm; text-align: justify; }
+.preg { background: var(--claro); padding: 3mm 4mm; font-style: italic; margin: 0 0 4mm; break-inside: avoid; }
+ul, ol { margin: 0 0 3mm; padding-left: 7mm; } li { margin-bottom: 1.5mm; }
+table { width: 100%; border-collapse: collapse; margin: 3mm 0 2mm; font-size: 10.5pt; break-inside: avoid; }
+th { background: #F59AB5; color: #4A1B30; text-align: left; padding: 1.8mm 2.5mm; }
+td { border: 1px solid #F0C9D6; padding: 1.8mm 2.5mm; vertical-align: top; }
+.fuente { font-size: 9.5pt; color: #8A6B77; margin-top: 0; }
+.refs p { text-indent: -8mm; padding-left: 8mm; text-align: left; font-size: 11pt; }
+.indice p { margin: 0 0 2mm; }
+.new { page-break-before: always; }
 </style></head><body>
 
 <div class="cover">
-  <div class="k">DIRECCIÓN DE RECURSOS HUMANOS II · 4º GADE · CASO PRÁCTICO 1</div>
-  <h1>Fusión CaixaBank – Bankia</h1>
-  <div class="sub">Análisis de Puestos de Trabajo y Planificación de Recursos Humanos ante la integración de dos plantillas</div>
-  <div class="circles"><div class="c1"><div>≈35.600<small>empleados CaixaBank</small></div></div><div class="c2"><div>≈16.000<small>empleados Bankia</small></div></div></div>
-  <div class="meta">Universidad de Cádiz · Facultad de Ciencias Económicas y Empresariales · Curso 2026/27<br>Integrantes: ______________________________________________</div>
+  <div class="uni">Universidad de Cádiz<br>Facultad de Ciencias Económicas y Empresariales</div>
+  <h1>Caso Práctico 1:<br>Fusión CaixaBank y Bankia</h1>
+  <div class="sub">Dirección de Recursos Humanos II · 4º GADE</div>
+  <div class="line"></div>
+  <div class="meta">Integrantes:<br>______________________________<br>______________________________<br>______________________________<br><br>Curso 2026/27</div>
 </div>
 
-<section style="page-break-before:auto">
-<h2>Índice</h2>
-<ul class="toc">
-<li><span class="n">1.</span>Introducción y contexto de la fusión</li>
-<li><span class="n">2.</span>Pregunta 1 · El papel del APT en la fusión y su utilidad para el ajuste de plantilla</li>
-<li><span class="n">3.</span>Pregunta 2 · Pasos del APT aplicados a la fusión</li>
-<li><span class="n">4.</span>Pregunta 3 · Una nueva planificación de Recursos Humanos</li>
-<li><span class="n">5.</span>Pregunta 4 · Utilidad de las planificaciones previas a la fusión</li>
-<li><span class="n">6.</span>Conclusiones</li>
-<li><span class="n">7.</span>Fuentes</li>
+<div class="indice">
+<h2 style="margin-top:0">Índice</h2>
+<p>1. Introducción</p>
+<p>2. Pregunta 1: el papel del APT en la fusión</p>
+<p>3. Pregunta 2: pasos del APT aplicados a la fusión</p>
+<p>4. Pregunta 3: ¿una nueva planificación de RRHH?</p>
+<p>5. Pregunta 4: utilidad de las planificaciones anteriores</p>
+<p>6. Conclusiones</p>
+<p>7. Bibliografía y fuentes</p>
+</div>
+
+<h2>1. Introducción</h2>
+<p>En septiembre de 2020 se anunció la fusión entre CaixaBank y Bankia. Los consejos de los dos bancos la aprobaron el 17 y 18 de septiembre y la operación se hizo como una absorción de Bankia por parte de CaixaBank. El resultado fue el banco más grande de España, con unos 664.000 millones de euros en activos, más de 51.000 trabajadores (unos 35.600 de CaixaBank y unos 16.000 de Bankia) y una red de algo más de 6.000 oficinas, muchas de ellas muy cerca unas de otras.</p>
+<p>Uno de los objetivos principales era ahorrar costes, unos 770 millones de euros al año según las estimaciones de la época. Esto hacía pensar que iba a haber un ajuste de plantilla, aunque en el momento de la noticia todavía no se sabía de cuántas personas y quedaba pendiente negociarlo con los sindicatos.</p>
+<p>Lo que nos ha parecido más interesante del caso es la contradicción que plantea el enunciado: CaixaBank dice que las personas son el pilar fundamental de su actividad y su principal activo, pero gran parte del ahorro de la fusión viene precisamente de reducir puestos que estaban duplicados. Para analizar el caso vamos a usar sobre todo el Tema 2 (Procesos básicos), es decir, el análisis de puestos de trabajo y la planificación de recursos humanos, y lo relacionaremos también con otros temas de la asignatura.</p>
+
+<h2 class="new">2. Pregunta 1: el papel del APT en la fusión</h2>
+<div class="preg">¿Cuál es el papel que juega la función de Análisis de Puestos de Trabajo (APT) ante la fusión que se presenta en el caso? ¿Sería de utilidad para el ajuste de plantilla?</div>
+<p>Según el Tema 2, el APT es el procedimiento que sirve para establecer las obligaciones y habilidades que requiere un puesto de trabajo y el tipo de persona que debe ocuparlo. Es importante tener en cuenta que lo que se analiza es el puesto y no a la persona que lo ocupa.</p>
+<p>Con el APT se recoge información sobre las actividades que se hacen en el puesto, las conductas que se exigen, las máquinas y herramientas que se usan, los estándares de desempeño, el contexto (horario, condiciones…) y los requisitos humanos. Esta información se puede obtener con entrevistas, cuestionarios, observación o diarios de actividades, y luego se usa para hacer dos documentos:</p>
+<ul>
+<li>La <b>descripción del puesto</b>, que explica qué hace el trabajador, cómo lo hace y en qué condiciones.</li>
+<li>La <b>especificación del puesto</b>, que recoge los requisitos que tiene que tener la persona (estudios, habilidades, personalidad…).</li>
 </ul>
+<p>En el caso de la fusión, creemos que el APT es fundamental porque es la forma de saber realmente qué hace cada persona en los dos bancos. Sería algo así como un "mapa" de las dos plantillas. Comparando los puestos de CaixaBank y de Bankia se podrían ver:</p>
+<ul>
+<li><b>Duplicidades:</b> puestos que hacen lo mismo o casi lo mismo, tanto en oficinas como en servicios centrales.</li>
+<li><b>Diferencias entre los dos bancos:</b> puestos que se llaman igual pero hacen cosas distintas, o al revés.</li>
+<li><b>Competencias:</b> trabajadores que tienen conocimientos útiles para asumir otras funciones.</li>
+<li><b>Posibilidades de reorganizar:</b> funciones que se pueden juntar, ampliar o repartir de otra forma.</li>
+</ul>
+<p>Por ejemplo, si los dos bancos tenían departamentos administrativos parecidos en sus servicios centrales, con el APT se podrían comparar las tareas de esos puestos antes de decidir cómo se organiza el trabajo después de la fusión.</p>
+<p>Además, el APT no sirve solo para esto, sino que es la base de casi todos los procesos de RRHH que hemos visto en la asignatura: la planificación (Tema 2), recolocar y seleccionar a la gente en los nuevos puestos (Tema 3), la formación y los traslados (Tema 4) y la retribución (Tema 5), ya que para igualar los sueldos de las dos plantillas primero hay que saber qué puestos son equivalentes.</p>
+<h3>¿Sirve para el ajuste de plantilla?</h3>
+<p>Sí, pensamos que sería muy útil, porque da información objetiva sobre qué puestos son necesarios, cuáles se solapan y qué trabajadores podrían hacer otras funciones. Así las decisiones se toman según lo que de verdad necesita la empresa y no solo mirando el número de empleados o lo que cuesta cada uno.</p>
+<p>Aun así, el APT por sí solo no dice cuántas personas tienen que salir de la empresa. Lo que hace es dar información para poder decidir, pero eso hay que completarlo con la planificación de recursos humanos. Además, cualquier medida tiene que cumplir la ley y negociarse con los representantes de los trabajadores, que es lo que acabó pasando en este caso.</p>
 
-<h2 style="margin-top:10mm"><span class="n">1.</span>Introducción y contexto</h2>
-<p>El 17 y 18 de septiembre de 2020 los consejos de administración de CaixaBank y Bankia aprobaron su fusión por absorción, que dio lugar a la mayor entidad financiera de España por volumen de activos. La operación, recogida por <i>Expansión</i> el 19 de septiembre de 2020, tendría repercusiones importantes para trabajadores y clientes: la integración de dos redes con numerosas oficinas próximas y de dos servicios centrales con funciones similares hacía previsible un ajuste de plantilla, cuyo tamaño todavía estaba pendiente de concretar y negociar con la representación de los trabajadores.</p>
-<div class="stats">
-<div class="stat"><b>+51.000</b><span>empleados entre ambas entidades</span></div>
-<div class="stat"><b>≈6.300</b><span>oficinas, muchas solapadas</span></div>
-<div class="stat"><b>664.000 M€</b><span>en activos</span></div>
-<div class="stat"><b>770 M€</b><span>ahorro anual de costes previsto por sinergias</span></div>
-</div>
-<p class="caption">Fuentes: comunicado de CaixaBank (18/09/2020); Banco de España, IEF primavera 2021; Bolsamanía (2020).</p>
-<p>El enunciado del caso recoge que, para CaixaBank, <i>las personas son el pilar fundamental de su actividad y su principal activo</i>. La tensión del caso está en conciliar esa afirmación con el objetivo de obtener sinergias, que en buena parte proceden de eliminar duplicidades de plantilla y oficinas. Para analizarla utilizamos las dos herramientas del Tema 2 (Procesos básicos): el Análisis de Puestos de Trabajo (APT) y la Planificación de Recursos Humanos, y las relacionamos con el resto de temas de la asignatura.</p>
-<p>Lo ocurrido después confirma la relevancia de estas herramientas: la fusión jurídica se hizo efectiva el 26 de marzo de 2021; en abril de 2021 la entidad propuso 8.291 salidas y, tras la negociación sindical, el 1 de julio de 2021 se firmó un expediente de regulación de empleo de 6.452 salidas voluntarias (un 22 % menos), con un coste estimado de unos 1.900 millones de euros y la homologación progresiva, en cinco años, de las condiciones de la plantilla procedente de Bankia.</p>
-</section>
-
-<section>
-<h2><span class="n">2.</span>Pregunta 1 · El papel del APT</h2>
-<div class="q">¿Cuál es el papel que juega la función de Análisis de Puestos de Trabajo (APT) ante la fusión que se presenta en el caso? ¿Sería de utilidad para el ajuste de plantilla?</div>
-<h3>2.1. Qué es el APT</h3>
-<p>Según el Tema 2, el APT es el procedimiento para establecer las obligaciones y habilidades que requiere un puesto de trabajo, así como el tipo de persona que debe contratarse para ocuparlo (Dessler, 2009). No se analiza a la persona, sino lo que necesita cada puesto. El especialista de RRHH recoge información sobre seis aspectos: actividades laborales, conductas humanas exigidas, máquinas, herramientas y equipos, estándares de desempeño, contexto del puesto y requisitos humanos. Con ella se elaboran dos documentos:</p>
-<div class="cards">
-<div class="card"><b>Descripción del puesto:</b> qué hace realmente la persona que lo ocupa, cómo lo hace y en qué condiciones (identificación, resumen, responsabilidades, autoridad, estándares de desempeño y condiciones laborales).</div>
-<div class="card"><b>Especificación del puesto:</b> los «requisitos humanos» para desempeñarlo: estudios, conocimientos, habilidades y rasgos de personalidad.</div>
-</div>
-<h3>2.2. Papel del APT en la fusión</h3>
-<p>En la fusión, el APT funciona como el mapa de las dos plantillas: permite conocer qué puestos existen en cada entidad, qué funciones desempeñan sus trabajadores, qué responsabilidades asumen y qué competencias necesitan. Comparando los puestos de ambas entidades se identifican:</p>
-<div class="cards">
-<div class="card"><b>Duplicidades.</b> Puestos con funciones iguales o muy similares, tanto en oficinas próximas como en los servicios centrales.</div>
-<div class="card"><b>Diferencias organizativas.</b> Puestos con el mismo nombre pero funciones distintas, o con nombres diferentes y tareas equivalentes.</div>
-<div class="card"><b>Necesidades de competencias.</b> Trabajadores con conocimientos y habilidades útiles para asumir nuevas responsabilidades.</div>
-<div class="card"><b>Posibilidades de reorganización.</b> Funciones que pueden integrarse, ampliarse o redistribuirse para evitar duplicidades y ganar eficiencia.</div>
-</div>
-<p>Por ejemplo, si CaixaBank y Bankia disponían de áreas administrativas similares en sus servicios centrales, el APT permite comparar las tareas y responsabilidades reales de esos puestos antes de decidir cómo se organiza el trabajo después de la fusión.</p>
-<p>Además, el APT es la base del resto de procesos de RRHH de la nueva entidad (Tema 2, 2.1.1): orienta la integración de la gestión de personas en la nueva estrategia (Tema 1); alimenta la planificación (Tema 2); permite reubicar, seleccionar internamente y socializar a las personas en sus nuevos puestos (Tema 3); identifica necesidades de formación y orienta ascensos y transferencias (Tema 4); y, mediante la valoración de puestos, sirve de base para homologar las retribuciones y garantizar la equidad interna entre las dos plantillas (Tema 5).</p>
-<h3>2.3. ¿Es útil para el ajuste de plantilla?</h3>
-<p><b>Sí.</b> El APT proporciona información objetiva para saber qué puestos son necesarios en la nueva estructura, cuáles presentan solapamientos y qué trabajadores pueden asumir otras funciones. Así, las decisiones se fundamentan en las necesidades reales de la organización y no solo en el número de empleados o en el coste salarial, y resultan más defendibles ante la plantilla y sus representantes.</p>
-<p>No obstante, el APT no determina por sí solo cuántos trabajadores deben abandonar la empresa. Su función es aportar información para decidir, y debe completarse con la planificación de recursos humanos y con el análisis de las necesidades futuras. Además, cualquier medida laboral debe respetar los procedimientos legales y la negociación con la representación de los trabajadores, como ocurrió finalmente con el acuerdo de julio de 2021.</p>
-</section>
-
-<section>
-<h2><span class="n">3.</span>Pregunta 2 · Pasos del APT aplicados a la fusión</h2>
-<div class="q">Comenta los pasos a seguir en el APT aplicado a la fusión de las dos empresas.</div>
-<p>El Tema 2 propone seis pasos básicos. Aplicados a CaixaBank y Bankia serían:</p>
-<ol class="steps">
-<li><b>Determinar cómo se utilizará la información.</b> El objetivo es conocer cómo están organizados los puestos de ambas entidades, identificar duplicidades y determinar los cambios necesarios para integrar las plantillas. La información servirá para reorganizar departamentos, redistribuir responsabilidades y apoyar las decisiones sobre el ajuste.</li>
-<li><b>Revisar la información básica importante.</b> Organigramas, estructura organizativa y documentación de puestos existente en los dos bancos: departamentos, relaciones jerárquicas, funciones de cada unidad y puestos con posibles solapamientos.</li>
-<li><b>Seleccionar puestos representativos.</b> Con más de 51.000 empleados no es viable estudiar cada puesto individualmente. Se seleccionan puestos representativos de cada área, empezando por aquellas donde se sospechan duplicidades: atención al cliente, gestores comerciales, personal administrativo y servicios centrales. Si varios trabajadores hacen el mismo trabajo, se recoge información de varios y se promedian los resultados.</li>
-<li><b>Analizar los puestos.</b> Se recoge información sobre actividades, conductas, condiciones de trabajo y habilidades combinando métodos (ver tabla).</li>
-<li><b>Verificar la información con empleados y supervisores.</b> Triangulación entre trabajador, supervisor y RRHH. Es especialmente importante en una fusión, donde lo formalmente asignado a un puesto puede no coincidir con lo que realmente se hace y donde el miedo a perder el empleo puede llevar a exagerar funciones.</li>
-<li><b>Elaborar la descripción y la especificación de cada puesto.</b> Funciones, responsabilidades, autoridad, condiciones laborales y estándares de desempeño, junto con los requisitos, conocimientos y competencias. Estas fichas permiten comparar puestos equivalentes y fijar cómo se organizarán en la nueva estructura.</li>
-</ol>
+<h2 class="new">3. Pregunta 2: pasos del APT aplicados a la fusión</h2>
+<div class="preg">Comenta los pasos a seguir en el APT aplicado a la fusión de las dos empresas.</div>
+<p>En el Tema 2 se explican seis pasos para hacer el análisis de puestos. Aplicados a la fusión quedarían así:</p>
+<p><b>1. Determinar para qué se va a usar la información.</b> Lo primero es tener claro qué se quiere conseguir. En este caso sería conocer cómo están organizados los puestos en los dos bancos, ver dónde hay duplicidades y qué cambios hacen falta para juntar las plantillas.</p>
+<p><b>2. Revisar la información básica.</b> Habría que mirar los organigramas y la estructura de CaixaBank y de Bankia para ver qué departamentos hay, cómo son las relaciones jerárquicas y qué puestos pueden estar repetidos.</p>
+<p><b>3. Seleccionar puestos representativos.</b> Con más de 51.000 empleados no tiene sentido analizar todos los puestos uno a uno, así que se elegirían algunos representativos de cada área, empezando por donde es más probable que haya duplicidades: atención al cliente, gestores comerciales, administrativos y servicios centrales. Si varias personas hacen el mismo trabajo, se recoge información de varias y se hace una media.</p>
+<p><b>4. Analizar los puestos.</b> Aquí se recoge la información sobre las tareas, las responsabilidades, las condiciones de trabajo y las habilidades. Nosotros combinaríamos varios métodos:</p>
 <table>
-<tr><th>Método</th><th>Uso en la fusión</th><th>Ventajas</th><th>Inconvenientes</th></tr>
-<tr><td>Entrevista</td><td>Trabajadores y supervisores, individual o en grupo cuando muchos hacen tareas similares</td><td>Rapidez, sencillez, profundidad</td><td>Distorsión e información exagerada</td></tr>
-<tr><td>Cuestionario</td><td>Envío por la intranet a toda la red de oficinas («APT por Internet»): datos homogéneos y comparables</td><td>Rapidez y eficiencia</td><td>Elaboración y validación costosas</td></tr>
-<tr><td>Observación</td><td>Tareas rutinarias de oficina, durante un ciclo completo y junto a la entrevista</td><td>Muestra lo que realmente se hace</td><td>Reactividad del trabajador observado</td></tr>
-<tr><td>Diario de actividades</td><td>Conocer las tareas y el tiempo dedicado a cada una</td><td>Cronológico y detallado</td><td>Depende de la constancia del empleado</td></tr>
+<tr><th>Método</th><th>Cómo lo usaríamos</th><th>Ventajas</th><th>Inconvenientes</th></tr>
+<tr><td>Entrevistas</td><td>Con trabajadores y supervisores, en grupo si muchos hacen lo mismo</td><td>Rápidas y dan bastante detalle</td><td>Pueden exagerar sus funciones</td></tr>
+<tr><td>Cuestionarios</td><td>Por la intranet a todas las oficinas</td><td>Rápidos, llegan a todos</td><td>Cuesta prepararlos bien</td></tr>
+<tr><td>Observación</td><td>En tareas rutinarias de oficina</td><td>Se ve lo que realmente se hace</td><td>La gente cambia su forma de trabajar si la observan</td></tr>
+<tr><td>Diarios</td><td>Para ver el tiempo que se dedica a cada tarea</td><td>Muy detallados</td><td>Dependen de que el trabajador los rellene bien</td></tr>
 </table>
-<p class="caption">Elaboración propia a partir del Tema 2, apdo. 2.1.2 (Gómez-Mejía et al., 2008).</p>
-<p>Como resultado, se obtendrían fichas comparables. A modo de <b>ejemplo ilustrativo</b> (no son datos reales de las entidades):</p>
-<table>
-<tr><th>Apartado</th><th>Gestor/a comercial · CaixaBank</th><th>Gestor/a comercial · Bankia</th><th>Puesto unificado</th></tr>
-<tr><td>Funciones</td><td>Cartera de particulares, venta y asesoramiento</td><td>Particulares y pymes, operaciones de caja</td><td>Cartera mixta y asesoramiento; caja en canal digital</td></tr>
-<tr><td>Autoridad</td><td>Aprobación de riesgos hasta un límite</td><td>Propuesta de riesgos al director</td><td>Límite único de aprobación</td></tr>
-<tr><td>Estándares</td><td>Objetivos comerciales trimestrales</td><td>Objetivos anuales por oficina</td><td>Objetivos comunes y medibles</td></tr>
-<tr><td>Especificación</td><td>Grado + certificación MiFID II</td><td>Grado; MiFID II en curso</td><td>Grado + MiFID II + competencias digitales</td></tr>
-</table>
-<p>Seguir estos pasos permite una integración ordenada de las plantillas: el objetivo no debe limitarse a reducir el número de empleados, sino a lograr una estructura coherente, eficiente y adaptada a las necesidades de la nueva entidad.</p>
-</section>
+<p class="fuente">Elaboración propia a partir del Tema 2.</p>
+<p>Creemos que en una fusión hay que tener cuidado con las entrevistas, porque es normal que los trabajadores tengan miedo a perder su puesto y exageren lo que hacen. Por eso nos parece importante explicar bien para qué es el análisis.</p>
+<p><b>5. Verificar la información con los empleados y sus supervisores.</b> Una vez recogidos los datos hay que comprobar que son correctos, contrastándolos con el trabajador y con su jefe directo. Esto es especialmente importante en una fusión, porque puede que lo que pone "en papel" que hace un puesto no coincida con lo que se hace en realidad.</p>
+<p><b>6. Hacer la descripción y la especificación de los puestos.</b> Por último, se redactaría la descripción de cada puesto (funciones, responsabilidades, condiciones, estándares) y su especificación (requisitos y competencias). Con esto CaixaBank podría comparar los puestos de las dos entidades, ver cuáles son equivalentes y decidir cómo quedan en la nueva estructura.</p>
+<p>En resumen, seguir estos pasos permitiría juntar las plantillas de forma más ordenada. Para nosotros el objetivo no debería ser solo reducir empleados, sino conseguir una organización que funcione bien.</p>
 
-<section>
-<h2><span class="n">4.</span>Pregunta 3 · Una nueva planificación de RRHH</h2>
-<div class="q">¿Sería recomendable que la nueva entidad resultante de la fusión realizara una nueva planificación de Recursos Humanos? En caso afirmativo, ¿cuáles serían los pasos a seguir?</div>
-<p><b>Sí, es muy recomendable.</b> La fusión modifica la estrategia, la estructura y las necesidades de personal, por lo que no basta con mantener por separado las planificaciones de CaixaBank y Bankia. Según el Tema 2, la planificación permite anticipar cuántos trabajadores necesitará la empresa, con qué perfiles y si podrá cubrirlos internamente o deberá acudir al mercado, y «surge de los planes estratégicos de la empresa, tales como […] reducir costes, que afectan a los tipos de puestos que la empresa necesita». En este caso, la estrategia de reducir costes, aprovechar sinergias (≈770 M€ anuales) e integrar las dos entidades debe trasladarse a la planificación de la plantilla.</p>
-<ol class="steps">
-<li><b>Analizar los objetivos y la estrategia de la nueva entidad:</b> eficiencia, reducción de costes y sinergias de la integración; de ellos se deriva la estructura y los puestos necesarios.</li>
-<li><b>Pronosticar las necesidades de personal:</b> cuántas personas y con qué competencias, considerando el volumen de actividad, la productividad, los cambios tecnológicos, la evolución de la red de oficinas, la rotación y los recursos financieros. Herramientas: análisis de tendencias, análisis de razón, diagrama de dispersión y pronósticos computarizados, sin olvidar el juicio de la dirección (estos métodos, por sí solos, no recogen el impacto de las iniciativas estratégicas). Por ejemplo, si se cierran oficinas próximas, hay que calcular la plantilla necesaria en las que siguen abiertas y en los servicios centrales.</li>
-<li><b>Estimar la oferta interna:</b> inventarios de cualificaciones (desempeño, antecedentes, posibilidades de ascenso), sistemas de información y gráficos de reemplazo para detectar quién puede ocupar otros puestos sin contratar fuera.</li>
-<li><b>Estimar la oferta externa:</b> solo si dentro no hay suficientes perfiles, por ejemplo en tecnología, ciberseguridad o servicios digitales (tasas de desempleo, Internet, prensa).</li>
-<li><b>Comparar necesidades y oferta</b> en cantidad y cualificación: exceso, déficit o equilibrio. En una fusión las tres situaciones se dan a la vez: exceso en funciones administrativas y oficinas solapadas, déficit en perfiles especializados y equilibrio en otras áreas.</li>
-<li><b>Diseñar y aplicar medidas.</b> Ante el exceso: movilidad funcional, reasignación de tareas, movilidad geográfica cuando proceda, salidas voluntarias incentivadas o prejubilaciones, siempre respetando la normativa y negociando con la representación sindical. Ante el déficit: formación, promoción interna (Tema 4) y, si es necesario, contratación externa (Tema 3).</li>
-<li><b>Controlar y evaluar:</b> revisar periódicamente si la plantilla se ajusta a las necesidades reales, si mejora la productividad y si la reorganización funciona. La planificación no es un proceso cerrado.</li>
+<h2 class="new">4. Pregunta 3: ¿una nueva planificación de RRHH?</h2>
+<div class="preg">¿Sería recomendable que la nueva entidad resultante de la fusión realizara una nueva planificación de Recursos Humanos? En caso afirmativo, ¿cuáles serían los pasos a seguir?</div>
+<p>Sí, creemos que sería muy recomendable. Con la fusión cambian la estrategia, la estructura de la empresa y las necesidades de personal, así que no tendría sentido seguir con las planificaciones que tenía cada banco por separado.</p>
+<p>Según el Tema 2, la planificación sirve para prever cuántos trabajadores va a necesitar la empresa, con qué perfiles y si se pueden cubrir con gente de dentro o hay que buscar fuera. Además, la planificación sale de los planes estratégicos de la empresa, como por ejemplo reducir costes, que es justo lo que pasa aquí. Los pasos que seguiríamos serían:</p>
+<ol>
+<li><b>Ver los objetivos y la estrategia de la nueva entidad.</b> En este caso, ser más eficientes, reducir costes y aprovechar las sinergias.</li>
+<li><b>Pronosticar las necesidades de personal.</b> Calcular cuánta gente va a hacer falta y con qué competencias, teniendo en cuenta el volumen de actividad, la productividad, la tecnología, el cierre de oficinas o la rotación. Para esto el tema explica herramientas como el análisis de tendencias, el análisis de razón o el diagrama de dispersión, aunque también es importante el criterio de los directivos. Por ejemplo, si se cierran oficinas que están cerca, habría que calcular cuántos empleados hacen falta en las que se quedan abiertas.</li>
+<li><b>Estimar la oferta interna.</b> Ver qué trabajadores hay en las dos plantillas, con inventarios de cualificaciones y gráficos de reemplazo, para saber quién podría ocupar otros puestos.</li>
+<li><b>Estimar la oferta externa.</b> Solo si dentro no hay gente con el perfil que se necesita, por ejemplo en tecnología o ciberseguridad.</li>
+<li><b>Comparar lo que se necesita con lo que se tiene.</b> Pueden salir tres situaciones: que sobre personal, que falte o que esté equilibrado. En una fusión lo normal es que pasen las tres a la vez según el área: sobra gente en tareas administrativas y falta en perfiles más especializados.</li>
+<li><b>Tomar medidas.</b> Si sobra personal: movilidad funcional o geográfica, reasignar tareas, bajas voluntarias o prejubilaciones, siempre negociando con los sindicatos. Si falta: formación, promoción interna o, si hace falta, contratar fuera.</li>
+<li><b>Controlar y evaluar.</b> Revisar cada cierto tiempo si las medidas funcionan, porque la planificación no se hace una vez y ya está.</li>
 </ol>
-<figure>
-<svg viewBox="0 0 640 230" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Carlito, Calibri, Arial">
-<text x="0" y="18" font-size="15" font-weight="700" fill="#0B2545">Salidas planteadas en el ERE de CaixaBank tras la fusión</text>
-<line x1="0" y1="200" x2="400" y2="200" stroke="#B8C7D6"/>
-<rect x="50" y="45" width="120" height="155" fill="#8DA9C4" rx="3"/><text x="110" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2433">8.291</text>
-<rect x="230" y="79.4" width="120" height="120.6" fill="#0F8B8D" rx="3"/><text x="290" y="72" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2433">6.452</text>
-<text x="110" y="220" text-anchor="middle" font-size="12" fill="#5C6B7A">Propuesta inicial (abr. 2021)</text>
-<text x="290" y="220" text-anchor="middle" font-size="12" fill="#5C6B7A">Acuerdo final (1 jul. 2021)</text>
-<text x="430" y="95" font-size="34" font-weight="700" fill="#F4A259">–22 %</text>
-<text x="430" y="120" font-size="12.5" fill="#1B2433">tras la negociación sindical;</text>
-<text x="430" y="138" font-size="12.5" fill="#1B2433">salidas voluntarias y coste</text>
-<text x="430" y="156" font-size="12.5" fill="#1B2433">estimado de ≈1.900 M€</text>
+<p>En la realidad, en abril de 2021 CaixaBank propuso 8.291 salidas y, después de negociar con los sindicatos, en julio de 2021 se firmó un ERE de 6.452 salidas voluntarias, un 22 % menos. El coste estimado fue de unos 1.900 millones de euros y además se acordó igualar poco a poco las condiciones de la plantilla de Bankia en cinco años.</p>
+<svg viewBox="0 0 560 210" width="78%" style="display:block;margin:2mm auto 1mm" xmlns="http://www.w3.org/2000/svg" font-family="Carlito, Calibri, Arial">
+<text x="280" y="16" text-anchor="middle" font-size="14" font-weight="700" fill="#7B2D4F">Salidas en el ERE de CaixaBank</text>
+<line x1="60" y1="180" x2="500" y2="180" stroke="#E8B4C6"/>
+<rect x="120" y="40" width="110" height="140" fill="#F59AB5"/><text x="175" y="33" text-anchor="middle" font-size="14" font-weight="700" fill="#2E2228">8.291</text>
+<rect x="330" y="71" width="110" height="109" fill="#D6457A"/><text x="385" y="64" text-anchor="middle" font-size="14" font-weight="700" fill="#2E2228">6.452</text>
+<text x="175" y="198" text-anchor="middle" font-size="12" fill="#5c4a52">Propuesta inicial (abril 2021)</text>
+<text x="385" y="198" text-anchor="middle" font-size="12" fill="#5c4a52">Acuerdo final (julio 2021)</text>
 </svg>
-<p class="caption">Fuentes: Bolsamanía, Forbes España y Ara (julio de 2021).</p>
-</figure>
-<p>La experiencia real ilustra el paso 6: el ajuste inicial se redujo un 22 % mediante negociación. Una planificación apoyada en el APT proporciona la base objetiva para esa negociación y permite estudiar alternativas a las salidas. En definitiva, una nueva planificación permite construir una plantilla adaptada a la nueva estructura, evitar duplicidades, aprovechar las capacidades de los empleados y justificar las decisiones sobre personal.</p>
-</section>
+<p class="fuente" style="text-align:center">Gráfico 1. Elaboración propia con datos de Bolsamanía y Forbes (2021).</p>
+<p>Esto demuestra que tener información y negociar sirvió para reducir el impacto sobre los trabajadores. En definitiva, una nueva planificación permitiría tener una plantilla adaptada a la nueva estructura, evitar duplicidades y aprovechar mejor a los empleados.</p>
 
-<section>
-<h2><span class="n">5.</span>Pregunta 4 · Utilidad de las planificaciones previas</h2>
-<div class="q">¿En qué medida son útiles las planificaciones de RRHH realizadas por las empresas antes de la fusión?</div>
-<p>Las planificaciones previas de CaixaBank y Bankia son <b>útiles como punto de partida</b>, pero <b>insuficientes</b> por sí solas para organizar los recursos humanos de la nueva entidad; deben revisarse y adaptarse.</p>
-<h3>5.1. Utilidad</h3>
-<div class="cards">
-<div class="card"><b>Foto de la situación de partida.</b> Número de empleados, cualificaciones, experiencia, puestos y necesidades previstas por cada entidad.</div>
-<div class="card"><b>Identificar necesidades y excedentes.</b> Al compararlas aparecen departamentos con necesidades similares y puestos con posibles duplicidades.</div>
-<div class="card"><b>Detectar talento reubicable.</b> Junto con los inventarios de cualificaciones, permiten valorar movilidad interna y formación antes que contrataciones o salidas.</div>
-<div class="card"><b>Contrastar previsiones con los nuevos objetivos.</b> Comprobar qué previsiones siguen siendo válidas tras la fusión.</div>
-</div>
-<h3>5.2. Limitaciones</h3>
-<p>Cada banco elaboró sus previsiones según su propia organización, procedimientos y estrategia, por lo que no contemplaban las duplicidades que aparecen al integrar las dos entidades ni las nuevas necesidades de la estructura conjunta. Además, la digitalización y el menor uso de las oficinas pueden haber modificado las necesidades previstas. La propia noticia refleja esta situación: antes de concretar las medidas laborales era necesario analizar solapamientos, duplicidades y economías de escala.</p>
-<div class="note"><b>1 + 1 ≠ 2.</b> Las necesidades de la nueva entidad no son la suma de las que tenían CaixaBank y Bankia por separado. Los planes previos, el APT conjunto y la nueva estrategia son los insumos de una planificación integrada a corto y largo plazo.</div>
-<p>En conclusión, la planificación previa facilita la transición porque aprovecha información ya disponible y reduce la incertidumbre inicial, pero la fusión exige una visión global de los recursos humanos.</p>
+<h2 class="new">5. Pregunta 4: utilidad de las planificaciones anteriores</h2>
+<div class="preg">¿En qué medida son útiles las planificaciones de RRHH realizadas por las empresas antes de la fusión?</div>
+<p>Pensamos que las planificaciones que tenían CaixaBank y Bankia antes de la fusión sí son útiles, pero solo como punto de partida. Por sí solas no sirven para organizar la nueva entidad y habría que revisarlas.</p>
+<p>Por un lado, son útiles porque:</p>
+<ul>
+<li>Dan una "foto" de cómo estaba cada plantilla: número de empleados, cualificaciones, experiencia y puestos.</li>
+<li>Al compararlas se pueden ver departamentos con necesidades parecidas y posibles duplicidades.</li>
+<li>Junto con los inventarios de cualificaciones, ayudan a ver qué trabajadores podrían asumir nuevas funciones, de forma que se puede intentar recolocar o formar a la gente antes de contratar fuera o despedir.</li>
+<li>Permiten comprobar si las previsiones que había siguen teniendo sentido con los nuevos objetivos.</li>
+</ul>
+<p>Por otro lado, tienen limitaciones. Cada banco hizo su planificación pensando en su propia organización y estrategia, así que no tenían en cuenta las duplicidades que iban a aparecer al juntarse. Además, con la digitalización y el menor uso de las oficinas, puede que las necesidades que se habían previsto ya no sean las mismas. La propia noticia lo refleja, ya que antes de concretar el ajuste había que analizar los solapamientos entre las dos entidades.</p>
+<p>Por eso decimos que "1 + 1 no es 2": lo que necesita el nuevo banco no es la suma de lo que necesitaba cada uno por separado. Las planificaciones anteriores ayudan a empezar y reducen la incertidumbre del principio, pero hay que hacer una planificación nueva y conjunta que tenga en cuenta los objetivos del nuevo banco y los resultados del análisis de puestos.</p>
 
-<h2 style="margin-top:9mm"><span class="n">6.</span>Conclusiones</h2>
-<ol class="steps">
-<li><b>El APT es el mapa de la fusión.</b> Sin él no se sabe qué puestos sobran, cuáles faltan ni quién puede reubicarse; es útil para el ajuste, pero no decide por sí solo.</li>
-<li><b>La planificación convierte las sinergias en decisiones sobre personas.</b> Conecta el APT con la estrategia y prioriza movilidad, formación y salidas negociadas.</li>
-<li><b>Los planes previos son un punto de partida.</b> Informan, pero la entidad fusionada necesita una planificación conjunta y revisable.</li>
-</ol>
-<p>Si, como afirma CaixaBank, las personas son su principal activo, el ajuste de plantilla debe apoyarse en un análisis objetivo de los puestos, en una planificación ligada a la estrategia y en la negociación con los trabajadores.</p>
-</section>
+<h2>6. Conclusiones</h2>
+<p>Después de hacer el trabajo, nuestras conclusiones son las siguientes:</p>
+<ul>
+<li>El APT es fundamental en una fusión, porque sin él no se sabe qué puestos sobran, cuáles faltan ni quién se puede recolocar. Es útil para el ajuste de plantilla, aunque no decide por sí solo.</li>
+<li>La nueva planificación de RRHH es necesaria porque cambia todo con la fusión, y es la que convierte la estrategia en decisiones sobre las personas.</li>
+<li>Las planificaciones anteriores sirven de punto de partida, pero no son suficientes.</li>
+</ul>
+<p>Para terminar, si como dice CaixaBank las personas son su principal activo, creemos que los ajustes tienen que hacerse con información objetiva y negociando con los trabajadores, buscando primero alternativas como la recolocación o la formación.</p>
 
-<section class="refs">
-<h2><span class="n">7.</span>Fuentes</h2>
-<h3>Bibliografía académica</h3>
+<div class="refs">
+<h2>7. Bibliografía y fuentes</h2>
 <p>Dessler, G. (2009). <i>Administración de recursos humanos</i> (11ª ed.). Pearson.</p>
 <p>Dolan, S. L., Valle Cabrera, R., Jackson, S. E. y Schuler, R. S. (2007). <i>La gestión de recursos humanos</i> (3ª ed.). McGraw-Hill.</p>
 <p>Gómez-Mejía, L. R., Balkin, D. B. y Cardy, R. L. (2008). <i>Dirección y gestión de recursos humanos</i> (5ª ed.). Prentice Hall.</p>
-<p>Universidad de Cádiz (2026). <i>Dirección de Recursos Humanos II</i>, Temas 1 a 5 (apuntes de la asignatura).</p>
-<h3>Prensa y fuentes oficiales</h3>
-<p>Expansión (19 de septiembre de 2020). Artículo sobre la fusión de CaixaBank y Bankia. https://www.expansion.com/empresas/banca/2020/09/19/5f65d2d5468aeb8d088b4657.html</p>
-<p>CaixaBank (18 de septiembre de 2020). Anuncio de la fusión con Bankia [comunicado]. https://www.caixabank.com/StaticFiles/pdfs/200918_IP_Anuncio_es.pdf</p>
-<p>Banco de España (2021). <i>Informe de Estabilidad Financiera, primavera 2021</i>, recuadro 2.4. https://repositorio.bde.es/bitstream/123456789/16463/1/IEF_2021_1_Rec2_4.pdf</p>
-<p>Bolsamanía (2020). CaixaBank y Bankia dan luz verde a la fusión que creará el mayor banco de España.</p>
+<p>Apuntes de la asignatura Dirección de Recursos Humanos II, Temas 1 a 5. Universidad de Cádiz.</p>
+<p>Expansión (19/09/2020). Noticia sobre la fusión de CaixaBank y Bankia. https://www.expansion.com/empresas/banca/2020/09/19/5f65d2d5468aeb8d088b4657.html</p>
+<p>CaixaBank (18/09/2020). Comunicado del anuncio de la fusión. https://www.caixabank.com/StaticFiles/pdfs/200918_IP_Anuncio_es.pdf</p>
+<p>Banco de España (2021). Informe de Estabilidad Financiera, primavera 2021.</p>
 <p>Bolsamanía (2021). CaixaBank y sindicatos firman un ERE para 6.452 empleados.</p>
 <p>Forbes España (2021). CaixaBank pacta 6.452 despidos: así son las condiciones del ERE.</p>
-<p>Ara (2021). CaixaBank pacta con los sindicatos un ERE de 6.452 trabajadores.</p>
 <p>Consumer Eroski (2020). Fusión de CaixaBank y Bankia: lo que todo cliente debe saber.</p>
-</section>
+</div>
 </body></html>
